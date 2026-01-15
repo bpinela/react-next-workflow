@@ -1,6 +1,8 @@
 {
   "git": {
-    "commitMessage": "chore: release ${version}",
+    "commit": false,
+    "tag": true,
+    "push": true,
     "tagName": "${version}",
     "tagAnnotation": "Release ${version}",
     "requireCleanWorkingDir": false,
@@ -15,9 +17,7 @@
   },
   "plugins": {
     "@release-it/conventional-changelog": {
-      "preset": "angular",
-      "infile": "CHANGELOG.md"
+      "preset": "angular"
     }
   }
 }
-

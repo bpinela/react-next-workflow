@@ -6,7 +6,8 @@
     "tagName": "${version}",
     "tagAnnotation": "Release ${version}",
     "requireCleanWorkingDir": false,
-    "requireUpstream": false
+    "requireUpstream": false,
+    "getLatestTagFromAllRefs": true
   },
   "github": {
     "release": true,
@@ -14,6 +15,9 @@
   },
   "npm": {
     "publish": false
+  },
+  "hooks": {
+    "before:init": "git fetch --tags"
   },
   "plugins": {
     "@release-it/conventional-changelog": {
